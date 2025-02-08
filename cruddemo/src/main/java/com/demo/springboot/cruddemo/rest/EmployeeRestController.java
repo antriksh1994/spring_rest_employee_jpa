@@ -12,7 +12,7 @@ import java.util.List;
 public class EmployeeRestController {
 
     private EmployeeService employeeService;
-
+    // constructor which has EmployeeService injected as a dependency
     @Autowired
     public EmployeeRestController(EmployeeService theEmployeeService) {
         employeeService = theEmployeeService;
