@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+// EmployeeServiceImpl implements EmployeeService meaning it must provide the actual implementations for
+// the methods defined in the EmployeeService interface
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeRepository employeeRepository;
@@ -32,7 +34,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         return theEmployee;
     }
-
+    // It calls employeeRepository.save(theEmployee), which is provided by JpaRepository
     @Override
     public Employee save(Employee theEmployee) {
         return employeeRepository.save(theEmployee);
